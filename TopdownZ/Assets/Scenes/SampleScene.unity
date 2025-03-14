@@ -218,6 +218,7 @@ GameObject:
   - component: {fileID: 1403817487}
   - component: {fileID: 1403817489}
   - component: {fileID: 1403817490}
+  - component: {fileID: 1403817491}
   m_Layer: 0
   m_Name: Brother
   m_TagString: Player
@@ -304,8 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5988fab37205ad43a94e40b83b491c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BodyPlayer: {fileID: 1403817490}
-  WalkingSpeed: 8
+  Player: {fileID: 1403817490}
+  WalkingSpeed: 4
   RunningSpeed: 10
 --- !u!50 &1403817490
 Rigidbody2D:
@@ -334,6 +335,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1403817491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403817486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad02b9f7f15ed149b3d49d48620a0a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1749056568
 GameObject:
   m_ObjectHideFlags: 0
