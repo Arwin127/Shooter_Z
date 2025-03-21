@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a540ea9765dee45870c738966ae34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BigBrother: {fileID: 1876280216}
+  brother: {fileID: 1876280216}
   speed: 2
 --- !u!114 &1079193319
 MonoBehaviour:
@@ -4193,7 +4193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a3a666d78b243147a9c7c706606cb45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1876280222}
+  brother: {fileID: 0}
   smoothSpeed: 0.125
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &1876280216
@@ -4410,6 +4410,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  cameraFollowScript: {fileID: 0}
+  sisterFollowScript: {fileID: 0}
 --- !u!1 &2122931745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1379467115740612143, guid: 37cb0d4e6fdb4e14096cdd94a74cbe27, type: 3}

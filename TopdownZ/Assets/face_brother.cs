@@ -5,8 +5,8 @@ using UnityEngine;
 public class Face_Brother : MonoBehaviour
 {
     private Transform m_transform;
-    public GameObject Brother;  
-   
+    public GameObject Brother;  // Reference to the Brother GameObject
+
     void Start()
     {
         m_transform = transform;
@@ -20,17 +20,31 @@ public class Face_Brother : MonoBehaviour
 
     private void FacePlayerDirection()
     {
+        if (Brother != null)
+        {
+            // Calculate the direction vector from the object to the Brother
+            Vector2 direction = Brother.transform.position - m_transform.position;
 
-        Vector2 direction = Brother.transform.position - m_transform.position;   
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; 
+            // Get the angle between the object and the Brother (in degrees)
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-       
-        Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward); 
-        m_transform.rotation = rotation;
+            // Set the rotation of the object to face the Brother
+            Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+            m_transform.rotation = rotation;
+        }
+        else
+        {
+            // If Brother is null (destroyed), stop rotating
+            Debug.LogWarning("Brother is null, cannot face him anymore.");
+        }
     }
 
     void Update()
     {
-        FacePlayerDirection();
+        // Only update rotation if Brother is still assigned
+        if (Brother != null)
+        {
+            FacePlayerDirection();
+        }
     }
 }

@@ -1,20 +1,24 @@
-using Unity.VisualScripting;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Sister_follow : MonoBehaviour
+public class SisterFollow : MonoBehaviour
 {
-    [SerializeField] public GameObject BigBrother;
-    [SerializeField] public float speed = 2f;
-    void Start()
-    {
+    public GameObject brother;  // Reference to the Brother (BigBrother)
+    public float speed = 2f;  // Speed at which the Sister follows
 
-    }
+    private bool isFollowing = true;  // Flag to check if the Sister should follow the Brother
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, BigBrother.transform.position, speed * Time.deltaTime);
+        // Only move towards the Brother if isFollowing is true and the Brother exists
+        if (isFollowing && brother != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, brother.transform.position, speed * Time.deltaTime);
+        }
+    }
+
+    // Method to stop the Sister from following
+    public void StopFollowing()
+    {
+        isFollowing = false;
     }
 }
