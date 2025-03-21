@@ -1007,6 +1007,8 @@ GameObject:
   - component: {fileID: 1079193319}
   - component: {fileID: 1079193318}
   - component: {fileID: 1079193320}
+  - component: {fileID: 1079193322}
+  - component: {fileID: 1079193321}
   m_Layer: 3
   m_Name: Sister
   m_TagString: Untagged
@@ -1075,7 +1077,7 @@ Transform:
   m_GameObject: {fileID: 1079193315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.85, y: 0.21, z: 0}
+  m_LocalPosition: {x: 7.93, y: 0.23, z: 0}
   m_LocalScale: {x: 0.23372999, y: -0.1997611, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1095,6 +1097,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brother: {fileID: 1876280216}
   speed: 2
+  raycastDistance: 5
+  stoppingDistance: 2
 --- !u!114 &1079193319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,6 +1125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 75
+<<<<<<< HEAD
 --- !u!1 &1130882341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,18 +1181,29 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
 --- !u!50 &1130882344
+=======
+--- !u!50 &1079193321
+>>>>>>> 7ed440664d75571f5f4805902a76d6331ffa05bd
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1130882341}
+=======
+  m_GameObject: {fileID: 1079193315}
+>>>>>>> 7ed440664d75571f5f4805902a76d6331ffa05bd
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
+<<<<<<< HEAD
   m_Mass: 15
+=======
+  m_Mass: 5
+>>>>>>> 7ed440664d75571f5f4805902a76d6331ffa05bd
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -1202,6 +1218,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+<<<<<<< HEAD
 --- !u!114 &1130882345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,12 +1233,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Brother: {fileID: 1876280216}
 --- !u!70 &1130882346
+=======
+--- !u!70 &1079193322
+>>>>>>> 7ed440664d75571f5f4805902a76d6331ffa05bd
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1130882341}
+=======
+  m_GameObject: {fileID: 1079193315}
+>>>>>>> 7ed440664d75571f5f4805902a76d6331ffa05bd
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1247,6 +1271,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
+<<<<<<< HEAD
   m_Offset: {x: -0.06564462, y: 2.3415356}
   m_Size: {x: 0.9230673, y: 2.0183067}
   m_Direction: 0
@@ -1331,6 +1356,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_Offset: {x: 0.06952319, y: 1.6832817}
+  m_Size: {x: 2.56574, y: 4.027577}
+  m_Direction: 0
+>>>>>>> 7ed440664d75571f5f4805902a76d6331ffa05bd
 --- !u!1 &1244524545
 GameObject:
   m_ObjectHideFlags: 0
@@ -6696,7 +6726,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 15
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -6863,8 +6893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  cameraFollowScript: {fileID: 0}
-  sisterFollowScript: {fileID: 0}
+  cameraFollowScript: {fileID: 1749056572}
+  sisterFollowScript: {fileID: 1079193318}
 --- !u!1 &2122931745 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1379467115740612143, guid: 37cb0d4e6fdb4e14096cdd94a74cbe27, type: 3}
